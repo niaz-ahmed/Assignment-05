@@ -37,6 +37,7 @@ function showDiv(id) {
     document.getElementById('donation-card').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
 }
+// selected button color
 
 function selectButton(no) {
     const button1 = document.getElementById('donation-btn');

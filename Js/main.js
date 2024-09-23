@@ -1,6 +1,6 @@
 
 
-
+// card-1
 document.getElementById('donate-1').addEventListener('click', function () {
     const aidMoney = getInputValue('input-money-noakhali');
 
@@ -18,7 +18,7 @@ document.getElementById('donate-1').addEventListener('click', function () {
         document.getElementById('fund-noakhali').innerText = totalFund;
         const remainingBalance = mainAmount - aidMoney;
         document.getElementById('main-balance').innerText = remainingBalance;
-        const noakhali = 'Taka is Donated for famine-2024 at Feni, Bangladesh'
+        const noakhali = 'Taka is Donated for famine-2024 at Feni, Bangladesh';
         appendToHistory('history',aidMoney, noakhali);
         my_modal_1.showModal();
         document.getElementById('input-money-noakhali').value = '';
@@ -46,7 +46,7 @@ document.getElementById('donate-2').addEventListener('click', function () {
         document.getElementById('fund-feni').innerText = totalFund;
         const remainingBalance = mainAmount - aidMoney;
         document.getElementById('main-balance').innerText = remainingBalance;
-        const feni = 'Taka is Donated for Flood Relief in Feni,Bangladesh'
+        const feni = 'Taka is Donated for Flood Relief in Feni,Bangladesh';
         appendToHistory('history', aidMoney, feni);
 
         my_modal_1.showModal();
@@ -74,7 +74,7 @@ document.getElementById('donate-3').addEventListener('click', function () {
         document.getElementById('fund-aid').innerText = totalFund;
         const remainingBalance = mainAmount - aidMoney;
         document.getElementById('main-balance').innerText = remainingBalance;
-        const aid ='Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh'
+        const aid ='Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh';
         appendToHistory('history', aidMoney, aid);
         my_modal_1.showModal();
         document.getElementById('aid').value = '';
@@ -85,8 +85,7 @@ document.getElementById('donate-3').addEventListener('click', function () {
 });
 
 
-// toggle
-
+// toggle showSection
 document.getElementById('donation-btn').addEventListener('click',function(){
 showDiv('donation-card');
 
