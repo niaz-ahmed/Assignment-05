@@ -11,7 +11,7 @@ document.getElementById('donate-1').addEventListener('click', function () {
     const mainAmount = parseFloat(mainBalance);
     if (!isNaN(aidMoney) && aidMoneyAmount >= 0) {
         if (aidMoney > mainAmount) {
-            alert('not enough money in balance');
+            alert('Don not have enough money in balance');
             return;
         }
         const totalFund = aidMoneyAmount + fundBalance;
@@ -20,10 +20,10 @@ document.getElementById('donate-1').addEventListener('click', function () {
         document.getElementById('main-balance').innerText = remainingBalance;
         const noakhali = 'Taka is Donated for famine-2024 at Feni, Bangladesh'
         appendToHistory('history',aidMoney, noakhali);
-        alert('done donating');
+        my_modal_1.showModal();
         document.getElementById('input-money-noakhali').value = '';
     } else {
-        alert('invalid');
+        alert('Invalid Input');
         document.getElementById('input-money-noakhali').value = '';
     }
 });
@@ -39,7 +39,7 @@ document.getElementById('donate-2').addEventListener('click', function () {
     const mainAmount = parseFloat(mainBalance);
     if (!isNaN(aidMoney) && aidMoneyAmount >= 0) {
         if (aidMoney > mainAmount) {
-            alert('not enough money in balance');
+            alert('Don not have enough money in balance');
             return;
         }
         const totalFund = aidMoneyAmount + fundBalance;
@@ -49,10 +49,10 @@ document.getElementById('donate-2').addEventListener('click', function () {
         const feni = 'Taka is Donated for Flood Relief in Feni,Bangladesh'
         appendToHistory('history', aidMoney, feni);
 
-        alert('done donating');
+        my_modal_1.showModal();
         document.getElementById('input-money-feni').value = '';
     } else {
-        alert('invalid');
+        alert('Invalid Input');
         document.getElementById('input-money-feni').value = '';
     }
 });
@@ -67,7 +67,7 @@ document.getElementById('donate-3').addEventListener('click', function () {
     const mainAmount = parseFloat(mainBalance);
     if (!isNaN(aidMoney) && aidMoneyAmount >= 0) {
         if (aidMoney > mainAmount) {
-            alert('not enough money in balance');
+            alert('Don not have enough money in balance');
             return;
         }
         const totalFund = aidMoneyAmount + fundBalance;
@@ -76,10 +76,10 @@ document.getElementById('donate-3').addEventListener('click', function () {
         document.getElementById('main-balance').innerText = remainingBalance;
         const aid ='Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh'
         appendToHistory('history', aidMoney, aid);
-        alert('done donating')
+        my_modal_1.showModal();
         document.getElementById('aid').value = '';
     } else {
-        alert('invalid');
+        alert('Invalid Input');
         document.getElementById('aid').value = '';
     }
 });
