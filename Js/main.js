@@ -1,0 +1,99 @@
+
+
+
+document.getElementById('donate-1').addEventListener('click', function () {
+    const aidMoney = getInputValue('input-money-noakhali');
+
+    const aidMoneyAmount = parseFloat(aidMoney);
+    const fundAmount = getTextValue('fund-noakhali');
+    const fundBalance = parseFloat(fundAmount);
+    const mainBalance = getTextValue('main-balance');
+    const mainAmount = parseFloat(mainBalance);
+    if (!isNaN(aidMoney) && aidMoneyAmount >= 0) {
+        if (aidMoney > mainAmount) {
+            alert('not enough money in balance');
+            return;
+        }
+        const totalFund = aidMoneyAmount + fundBalance;
+        document.getElementById('fund-noakhali').innerText = totalFund;
+        const remainingBalance = mainAmount - aidMoney;
+        document.getElementById('main-balance').innerText = remainingBalance;
+        const noakhali = 'Taka is Donated for famine-2024 at Feni, Bangladesh'
+        appendToHistory('history',aidMoney, noakhali);
+        alert('done donating');
+        document.getElementById('input-money-noakhali').value = '';
+    } else {
+        alert('invalid');
+        document.getElementById('input-money-noakhali').value = '';
+    }
+});
+
+// card-2
+document.getElementById('donate-2').addEventListener('click', function () {
+    const aidMoney = getInputValue('input-money-feni');
+
+    const aidMoneyAmount = parseFloat(aidMoney);
+    const fundAmount = getTextValue('fund-feni');
+    const fundBalance = parseFloat(fundAmount);
+    const mainBalance = getTextValue('main-balance');
+    const mainAmount = parseFloat(mainBalance);
+    if (!isNaN(aidMoney) && aidMoneyAmount >= 0) {
+        if (aidMoney > mainAmount) {
+            alert('not enough money in balance');
+            return;
+        }
+        const totalFund = aidMoneyAmount + fundBalance;
+        document.getElementById('fund-feni').innerText = totalFund;
+        const remainingBalance = mainAmount - aidMoney;
+        document.getElementById('main-balance').innerText = remainingBalance;
+        const feni = 'Taka is Donated for Flood Relief in Feni,Bangladesh'
+        appendToHistory('history', aidMoney, feni);
+
+        alert('done donating');
+        document.getElementById('input-money-feni').value = '';
+    } else {
+        alert('invalid');
+        document.getElementById('input-money-feni').value = '';
+    }
+});
+
+// card-3
+document.getElementById('donate-3').addEventListener('click', function () {
+    const aidMoney = getInputValue('aid');
+    const aidMoneyAmount = parseFloat(aidMoney);
+    const fundAmount = getTextValue('fund-aid');
+    const fundBalance = parseFloat(fundAmount);
+    const mainBalance = getTextValue('main-balance');
+    const mainAmount = parseFloat(mainBalance);
+    if (!isNaN(aidMoney) && aidMoneyAmount >= 0) {
+        if (aidMoney > mainAmount) {
+            alert('not enough money in balance');
+            return;
+        }
+        const totalFund = aidMoneyAmount + fundBalance;
+        document.getElementById('fund-aid').innerText = totalFund;
+        const remainingBalance = mainAmount - aidMoney;
+        document.getElementById('main-balance').innerText = remainingBalance;
+        const aid ='Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh'
+        appendToHistory('history', aidMoney, aid);
+        alert('done donating')
+        document.getElementById('aid').value = '';
+    } else {
+        alert('invalid');
+        document.getElementById('aid').value = '';
+    }
+});
+
+
+// toggle
+
+document.getElementById('donation-btn').addEventListener('click',function(){
+showDiv('donation-card');
+
+});
+
+
+document.getElementById('history-btn').addEventListener('click',function(){
+showDiv('history', 'history-btn');
+});
+
