@@ -90,8 +90,6 @@ document.getElementById('donation-btn').addEventListener('click',function(){
 showDiv('donation-card');
 
 });
-
-
 document.getElementById('history-btn').addEventListener('click',function(){
 showDiv('history', 'history-btn');
 });
